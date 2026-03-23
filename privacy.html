@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GenshinMerdact - Privacy Policy</title>
+    <link rel="icon" type="image/png" href="immagini/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .menu-button {
+            background-color: #333;
+            color: white;
+            font-size: 24px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .menu {
+            display: none;
+            background-color: #444;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 200px;
+            padding: 10px;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .menu ul li {
+            margin: 10px 0;
+        }
+        .menu ul li a {
+            color: white;
+            font-size: 18px;
+            display: block;
+            padding: 5px;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+        .menu ul li a:hover {
+            background-color: #666;
+        }
+        .menu.show {
+            display: block;
+            animation: slideIn 0.3s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30vh;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 36px;
+        }
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px 80px;
+            flex: 1;
+        }
+        .legal-section {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 24px;
+        }
+        .legal-section h2 {
+            font-size: 20px;
+            margin-bottom: 14px;
+            color: #99f2c8;
+        }
+        .legal-section p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #eee;
+            font-weight: 400;
+        }
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #99f2c8;
+        }
+        .footer-links a + a::before {
+            content: '·';
+            margin-right: 8px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+        <div id="menu" class="menu">
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="senza-senso">Senza Senso</a></li>
+                <li><a href="gioco">Gioco</a></li>
+            </ul>
+        </div>
+    </div>
+    <header class="hero">
+        <h1>Privacy Policy</h1>
+    </header>
+    <main class="legal-content">
+        <div class="legal-section">
+            <h2>1. Titolare del trattamento</h2>
+            <p>Il presente sito web è gestito a titolo personale e non raccoglie dati personali degli utenti in modo attivo.</p>
+        </div>
+        <div class="legal-section">
+            <h2>2. Dati raccolti</h2>
+            <p>Questo sito non utilizza moduli di registrazione, account utente o sistemi di raccolta dati. Non vengono raccolti né conservati dati personali degli utenti.</p>
+        </div>
+        <div class="legal-section">
+            <h2>3. Cookie</h2>
+            <p>Il sito potrebbe utilizzare cookie tecnici strettamente necessari al funzionamento. Non vengono utilizzati cookie di profilazione o di terze parti.</p>
+        </div>
+        <div class="legal-section">
+            <h2>4. Servizi di terze parti</h2>
+            <p>Il sito utilizza Google Fonts per il caricamento dei font. Google potrebbe raccogliere dati secondo la propria informativa sulla privacy disponibile su google.com/policies/privacy.</p>
+        </div>
+        <div class="legal-section">
+            <h2>5. Contatti</h2>
+            <p>Per qualsiasi domanda relativa alla privacy puoi contattarci tramite la pagina GitHub del progetto.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="privacy">Privacy Policy</a>
+            <a href="cookies">Cookie Policy</a>
+            <a href="terms">Termini di Servizio</a>
+        </div>
+        <p>&copy; 2025 - <span id="year"></span> GenshinMerdact. Tutti i diritti riservati.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
